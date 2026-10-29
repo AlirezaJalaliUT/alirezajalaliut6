@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#f6f8fc">
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} | {% endif %}Dr. Alireza Jalali · University of Tehran</title>
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="icon" href="{{ '/assets/img/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="{{ '/assets/css/scholar.css' | relative_url }}" rel="stylesheet"><script defer src="{{ '/assets/js/scholar.js' | relative_url }}"></script>
+</head>
+<body id="top"><a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="site-header"><div class="shell nav-shell">
+<a class="site-brand" href="{{ '/' | relative_url }}">Alireza Jalali<span class="brand-dot">.</span></a>
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-items"><span></span><span></span><span></span></button>
+<nav class="nav-items" id="nav-items" aria-label="Primary navigation"><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a><a href="{{ '/research/' | relative_url }}">Research</a><a href="{{ '/publications/' | relative_url }}">Publications</a><a href="{{ '/people/' | relative_url }}">People</a><a href="{{ '/projects/' | relative_url }}">Projects</a>
+<details class="more-menu"><summary>More <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></summary><div class="more-panel"><a href="{{ '/about/' | relative_url }}">About the Professor</a><a href="{{ '/news/' | relative_url }}">News &amp; Updates</a><a href="{{ '/alumni/' | relative_url }}">Alumni</a><a href="{{ '/teaching/' | relative_url }}">Teaching</a><a href="{{ '/awards/' | relative_url }}">Awards &amp; Honors</a><a href="{{ '/talks/' | relative_url }}">Talks &amp; Media</a><a href="{{ '/positions/' | relative_url }}">Open Positions</a><a href="{{ '/contact/' | relative_url }}">Contact</a></div></details>
+<a class="nav-contact" href="{{ '/contact/' | relative_url }}">Contact <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+<main id="main">{{ content }}</main>
+<footer class="site-footer"><div class="shell footer-layout"><p>© {{ 'now' | date: '%Y' }} Dr. Alireza Jalali</p><div class="footer-links"><a href="mailto:{{ site.data.site.email | escape }}">Email</a><a href="{{ site.data.site.scholar_url }}" target="_blank" rel="noopener noreferrer">Scholar</a><a href="https://github.com/AlirezaJalaliUT" target="_blank" rel="noopener noreferrer">GitHub</a>{% if site.data.site.cv_url and site.data.site.cv_url != '' %}<a href="{{ site.data.site.cv_url | relative_url }}">CV</a>{% endif %}<a href="{{ '/contact/' | relative_url }}">Contact</a><a href="#top">Top ↑</a></div></div></footer>
+</body></html>
